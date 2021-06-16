@@ -17,8 +17,9 @@ sudo apt-get install awscli
 
 3. Next, create a bucket buy using `aws s3 mb s3://[bucket name]`
 4. Create a file in your local directory, then transfer that to the buck by doing: `aws s3 cp [file name] s3://[bucket name]`
-5. Change the file permissions by selecting the file you wish to share
+5. Change the file permissions by selecting the bucket
 - Move to the permission tab
+- Move down to the ACL section
 - Press the edit button
 - Tick the read buttons for `Everyone (public access)`
 - Save changes
