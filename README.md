@@ -38,6 +38,8 @@ Additionally, you should change you bucket policy to:
     ]
 }
 ```
+Changing [BUCKET NAME] to the name of your bucket
+
 Additional commands:
 - `aws s3 sync s3://[bucket name]/ [file name]` - downloads a folder with the stated file inside, from the stated bucket 
 - `aws s3 rm s3://[bucket name]/[file name]` - removed the stated file from the stated bucket
