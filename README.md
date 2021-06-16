@@ -23,3 +23,8 @@ sudo apt-get install awscli
 - Press the edit button
 - Tick the read buttons for `Everyone (public access)`
 - Save changes
+
+Additional commands:
+- `aws s3 sync s3://[bucket name]/ [file name]` - downloads a folder with the stated file inside, from the stated bucket 
+- `aws s3 rm s3://[bucket name]/[file name]` - removed the stated file from the stated bucket
+- `aws s3 rb s3://[bucket name]` - removes the stated bucket
