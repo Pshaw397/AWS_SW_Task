@@ -23,7 +23,21 @@ sudo apt-get install awscli
 - Press the edit button
 - Tick the read buttons for `Everyone (public access)`
 - Save changes
-
+Additionally, you should change you bucket policy to:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::[BUCKET  NAME]/*"
+        }
+    ]
+}
+```
 Additional commands:
 - `aws s3 sync s3://[bucket name]/ [file name]` - downloads a folder with the stated file inside, from the stated bucket 
 - `aws s3 rm s3://[bucket name]/[file name]` - removed the stated file from the stated bucket
